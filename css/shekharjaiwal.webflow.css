@@ -7615,8 +7615,7 @@ p {
   border-radius: 24px;
   justify-content: space-between;
   margin-bottom: 0;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding: 28px 50px 28px 40px;
   display: flex;
 }
 
@@ -7653,7 +7652,10 @@ p {
 }
 
 .compare_heading_item {
+  justify-content: center;
+  align-items: center;
   width: 25%;
+  display: flex;
 }
 
 .paragraph-14 {
@@ -19800,7 +19802,7 @@ p {
   }
 
   .testimonial-about-section.testimonial {
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     padding-left: 20px;
   }
 
@@ -19824,8 +19826,8 @@ p {
   }
 
   .about-ticker-section.about-ticker {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 0;
+    padding-bottom: 20px;
   }
 
   .subtitle-block-7 {
@@ -20352,12 +20354,17 @@ p {
 
   .compare_heading_item_title {
     margin-left: 24px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 22px;
   }
 
   .bullet-point-price {
     margin-left: 20px;
+  }
+
+  .compare_heading {
+    padding-left: 20px;
+    padding-right: 45px;
   }
 
   .core-features-_title {
@@ -23268,7 +23275,7 @@ p {
 
   .testimonial-about-section.testimonial {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-left: 20px;
   }
 
@@ -23286,7 +23293,15 @@ p {
     font-size: 18px;
   }
 
-  .subtitle-name-4, .about-sponsors-ticker-title {
+  .subtitle-name-4 {
+    font-size: 16px;
+  }
+
+  .about-sponsors-ticker-title-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .about-sponsors-ticker-title {
     font-size: 16px;
   }
 
@@ -23826,8 +23841,6 @@ p {
 
   .compare_heading_item_title {
     margin-left: 5px;
-    font-size: 10px;
-    line-height: 16px;
   }
 
   .core-features-2 {
@@ -23842,6 +23855,10 @@ p {
 
   .bullet-point-price.bullet-point-price2 {
     margin-left: 18px;
+  }
+
+  .compare_heading {
+    padding-right: 35px;
   }
 
   .core-features-_title {
@@ -25304,9 +25321,12 @@ p {
     border-radius: 30px;
     width: 97.5%;
     height: 99%;
-    padding-top: 7px;
-    padding-left: 4px;
-    padding-right: 0;
+    padding: 7px 0 1px 4px;
+  }
+
+  .video-code-block.home-video-clock {
+    height: 98.5%;
+    padding-bottom: 3px;
   }
 
   .image-64 {
