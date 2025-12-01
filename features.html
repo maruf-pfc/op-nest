@@ -1,10 +1,15 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Fri Nov 28 2025 05:05:42 GMT+0000 (Coordinated Universal Time)  -->
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Dec 01 2025 05:03:10 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="690ecb89ea9fd607a5aea4b9" data-wf-site="690d66844e03ade3973cd3fa">
 <head>
   <meta charset="utf-8">
   <title>Features</title>
+  <meta content="Launch your digital agency with OpNest. Create websites, courses, stores &amp; profiles with no coding required. Get started today with our all-in-one platform." name="description">
   <meta content="Features" property="og:title">
+  <meta content="Launch your digital agency with OpNest. Create websites, courses, stores &amp; profiles with no coding required. Get started today with our all-in-one platform." property="og:description">
   <meta content="Features" property="twitter:title">
+  <meta content="Launch your digital agency with OpNest. Create websites, courses, stores &amp; profiles with no coding required. Get started today with our all-in-one platform." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="Webflow" name="generator">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
@@ -312,29 +317,34 @@
           <div data-w-id="e75900b9-c118-febb-7f23-dc19e04fb143" style="opacity:0" class="features_banner_content">
             <div class="div-block-66">
               <div class="div-block-67">
-                <div id="pauseDiv" class="mobile-screen feature-m-screen-warp"><img src="images/phone2.svg" loading="lazy" alt="" class="mobile-screen-png feature-m-screen">
-                  <div class="video-code-block feature-video-block">
-                    <div class="code-embed-2 feature-code-embed w-embed w-script"><!--  310x633 MOBILE VIDEO FRAME  -->
-                      <div class="vf-wrapper">
+                <div id="pauseDiv-feature" class="mobile-screen"><img src="images/i-phone-f.svg" loading="lazy" alt="" class="mobile-screen-png mobile-screen-2">
+                  <div class="video-code-block">
+                    <div class="code-embed-2 w-embed w-script"><!--  310x633 MOBILE VIDEO FRAME  -->
+                      <div class="vf-wrapper" id="pauseDiv-m">
                         <div class="vf-container" id="myFrame">
                           <video id="myVideo" poster="https://www.dropbox.com/scl/fi/msbfqb98etry40niafcwf/Screenshot-2025-11-17-181021.png?rlkey=9i1091iz9opszt8il5tnb9elp&raw=1" preload="metadata" autoplay="" muted="" loop="" playsinline="">
                             <source src="https://www.dropbox.com/scl/fi/zru5i5yltsf5fzg85go1k/The-Power-of-Compound-Interest-_-Become-a-Millionaire-compoundinterest-investing.mp4?rlkey=ygji5t8qyv1xtmw7x84gt9svj&raw=1" type="video/mp4">
                           </video>
                           <!--  Controls  -->
                           <div class="vf-controls">
-                            <div class="vf-play-btn" id="playButton">&#9658;</div>
+                            <!--  BIG CENTER BUTTON  -->
+                            <div class="vf-play-btn-warper">
+                              <div class="vf-play-btn" id="playButton">&#9658;</div>
+                            </div>
+                            <!--  Bottom bar  -->
                             <div class="vf-bar">
-                              <button id="toggleButton">&#9658;</button>
+                              <button id="toggleButton">&#10074;&#10074;</button>
                               <span id="currentTime">0:00</span>
                               <span id="duration">0:00</span>
-                              <button id="muteButton">&#128266;</button>
-                              <button id="fullscreenButton">&#x26F6;</button>
+                              <button id="muteButton">
+                                <img id="muteIcon" src="images/mute-microphone-1.png" width="20">
+                              </button>
                             </div>
                           </div>
                         </div>
                       </div>
                       <style>
-                          /* FIXED 310x633 MOBILE FRAME */
+                          /* FIXED 310x633 FRAME */
                           .vf-wrapper {
                             width: 305px;
                             height: 633px;
@@ -360,31 +370,49 @@
                             object-fit: cover;
                             cursor: pointer;
                           }
-                          /* CONTROLS */
+                          /* ALL CONTROLS */
                           .vf-controls {
                             position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
+                            inset: 0;
                             pointer-events: none;
                             z-index: 9999;
                           }
-                          .vf-play-btn {
+                          /* CENTER PLAY BUTTON WRAPPER */
+                          .vf-play-btn-warper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             position: absolute;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            font-size: 80px;
-                            color: #1EA9FF;
-                            cursor: pointer;
                             pointer-events: all;
-                            display: none;
                           }
+                          /* BIG CENTER BUTTON DESIGN */
+                          .vf-play-btn {
+                            --size: 64px;
+                            width: var(--size);
+                            height: var(--size);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background: #4e4f4a;
+                            color: #ffffff;
+                            border-radius: 50%;
+                            font-size: calc(var(--size) * 0.45);
+                            line-height: 1;
+                            user-select: none;
+                            cursor: pointer;
+                            box-shadow:
+                              0 8px 18px rgba(0, 0, 0, 0.35),
+                              inset 0 -4px 8px rgba(0, 0, 0, 0.18);
+                            transition: 0.15s ease;
+                          }
+                          /* Bottom control bar */
                           .vf-bar {
                             position: absolute;
-                            bottom: 30px;
-                            left: 0;
+                            bottom: 50px;
+                            left: 10px;
                             width: 100%;
                             display: flex;
                             align-items: center;
@@ -392,6 +420,7 @@
                             pointer-events: all;
                             color: #fff;
                             padding: 0 10px;
+                            z-index: 999;
                           }
                           .vf-bar button {
                             background: rgba(0, 0, 0, 0.4);
@@ -401,17 +430,55 @@
                             border-radius: 6px;
                             cursor: pointer;
                           }
+                          #muteButton {
+                            background: transparent;
+                            padding: 0;
+                            border: none;
+                            cursor: pointer;
+                            margin-left: 5px;
+                            display: flex;
+                          }
+                          #muteButton img {
+                            width: 16px;
+                            height: 16px;
+                          }
+                          /* MOBILE RESPONSIVE */
                           @media (max-width: 767px) {
                             .vf-wrapper {
                               width: 200px !important;
                               height: 416px !important;
                             }
-                            @media (max-width: 480px) {
-                              .vf-wrapper {
-                                width: 170px !important;
-                                height: 350px !important;
-                              }
+                            /* BIG CENTER BUTTON DESIGN */
+                            .vf-play-btn {
+                              --size: 45px;
+                              width: var(--size);
+                              height: var(--size);
                             }
+                            /* Bottom control bar */
+                            .vf-bar {
+                              position: absolute;
+                              bottom: 30px !important;
+                              left: 5px;
+                            }
+                          }
+                          @media (max-width: 480px) {
+                            .vf-wrapper {
+                              width: 170px !important;
+                              height: 350px !important;
+                            }
+                            /* BIG CENTER BUTTON DESIGN */
+                            .vf-play-btn {
+                              --size: 40px;
+                              width: var(--size);
+                              height: var(--size);
+                            }
+                            /* Bottom control bar */
+                            .vf-bar {
+                              position: absolute;
+                              bottom: 30px !important;
+                              left: 5px;
+                            }
+                          }
                         </style>
                       <script>
                           const video = document.getElementById('myVideo');
@@ -420,75 +487,69 @@
                           const currentTimeEl = document.getElementById('currentTime');
                           const durationEl = document.getElementById('duration');
                           const muteButton = document.getElementById('muteButton');
-                          const fullscreenButton = document.getElementById('fullscreenButton');
-                          const vfWrapper = document.getElementById('pauseDiv');
+                          const muteIcon = document.getElementById('muteIcon');
+                          const vfWrapper = document.getElementById('pauseDiv-feature');
                           video.muted = true;
-                          muteButton.textContent = '🔇';
-                          /* common play/pause function */
+                          /* TIME FORMAT */
+                          function formatTime(seconds) {
+                            const mins = Math.floor(seconds / 60);
+                            const secs = Math.floor(seconds % 60);
+                            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+                          }
+                          /* CENTRAL PLAY/PAUSE SYNC */
                           function togglePlayPause() {
                             if (video.paused) {
                               video.play();
                               toggleButton.innerHTML = '&#10074;&#10074;';
+                              playButton.innerHTML = '&#10074;&#10074;';
                               playButton.style.display = 'none';
                             } else {
                               video.pause();
                               toggleButton.innerHTML = '&#9658;';
-                              playButton.style.display = 'block';
+                              playButton.innerHTML = '&#9658;';
+                              playButton.style.display = 'flex';
                             }
                           }
-                          /* CLICK ANYWHERE IN FRAME → ONLY TOGGLE MUTE */
+                          /* Click frame → only mute */
                           vfWrapper.addEventListener('click', (e) => {
-                            // If clicking a control button → DO NOT toggle
                             if (e.target.closest('.vf-bar') || e.target.id === 'playButton') return;
                             video.muted = !video.muted;
-                            muteButton.textContent = video.muted ? '🔇' : '🔊';
+                            muteIcon.src = video.muted ?
+                              "https://cdn.prod.website-files.com/690d66844e03ade3973cd3fa/692bd196090ddaf274c30f66_mute-microphone%20(1).png" :
+                              "https://cdn.prod.website-files.com/690d66844e03ade3973cd3fa/692bd18c8eeea71f1ace2b6d_microphone%20(1).png";
                           });
-                          /* Clicking big play button */
+                          /* Button events */
                           playButton.addEventListener('click', (e) => {
                             e.stopPropagation();
                             togglePlayPause();
                           });
-                          /* Clicking toggle button */
                           toggleButton.addEventListener('click', (e) => {
                             e.stopPropagation();
                             togglePlayPause();
                           });
-                          /* Mute button click */
                           muteButton.addEventListener('click', (e) => {
                             e.stopPropagation();
                             video.muted = !video.muted;
-                            muteButton.textContent = video.muted ? '🔇' : '🔊';
+                            muteIcon.src = video.muted ?
+                              "https://cdn.prod.website-files.com/690d66844e03ade3973cd3fa/692bd196090ddaf274c30f66_mute-microphone%20(1).png" :
+                              "https://cdn.prod.website-files.com/690d66844e03ade3973cd3fa/692bd18c8eeea71f1ace2b6d_microphone%20(1).png";
                           });
-                          /* Fullscreen */
-                          fullscreenButton.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            if (!document.fullscreenElement) {
-                              vfWrapper.requestFullscreen();
-                            } else {
-                              document.exitFullscreen();
-                            }
-                          });
-                          /* Time update */
+                          /* Time Update */
                           video.addEventListener('loadedmetadata', () => {
                             durationEl.textContent = formatTime(video.duration);
                           });
                           video.addEventListener('timeupdate', () => {
                             currentTimeEl.textContent = formatTime(video.currentTime);
                           });
-                          function formatTime(seconds) {
-                            const mins = Math.floor(seconds / 60);
-                            const secs = Math.floor(seconds % 60);
-                            return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
-                          }
-                          // Set small toggle button icon based on video state
-                          function updateToggleButton() {
-                            toggleButton.innerHTML = video.paused ? '&#9658;' : '&#10074;&#10074;'; // play or pause
-                          }
-                          // On page load, check if video is autoplaying
-                          video.addEventListener('play', updateToggleButton);
-                          video.addEventListener('pause', updateToggleButton);
-                          // Also run once immediately in case autoplay already started
-                          updateToggleButton();
+                          /* Sync center button with play/pause */
+                          video.addEventListener("play", () => {
+                            playButton.style.display = "none";
+                            playButton.innerHTML = '&#10074;&#10074;';
+                          });
+                          video.addEventListener("pause", () => {
+                            playButton.style.display = "flex";
+                            playButton.innerHTML = '&#9658;';
+                          });
                         </script>
                     </div>
                   </div>
@@ -550,7 +611,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div><img src="images/Frame_1.svg" loading="lazy" alt="" class="image-85">
     </section>
     <div class="feature-what-offer">
       <section class="what-offer-section what-offer-home">
