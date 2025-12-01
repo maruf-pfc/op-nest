@@ -5461,6 +5461,10 @@ p {
   position: relative;
   overflow: hidden;
 }
+/* 
+.testimonial-single:hover{
+  cursor: pointer;
+} */
 
 .testimonial-review-text {
   z-index: 1;
@@ -7358,7 +7362,7 @@ p {
   padding-right: 72px;
 }
 
-.m_s_c_header_btn {
+.career_btn {
   background-color: #3898ec00;
   background-image: linear-gradient(167deg, #085bc5, #1ea9ff 70%);
   border-radius: 20px;
@@ -7368,6 +7372,7 @@ p {
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
+  z-index: 10;
 }
 
 .container-10 {
@@ -8085,6 +8090,10 @@ p {
   margin-top: 32px;
   padding: 10px 28px;
   display: flex;
+}
+
+.add-on-card-btn:hover{
+  cursor: pointer;
 }
 
 .tab-menu-add-on {
@@ -11205,7 +11214,7 @@ p {
   line-height: 48px;
 }
 
-.add-on-card-btn-2 {
+.add-on-details-card-btn {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   background-image: linear-gradient(135deg, #085bc5, #1ea9ff 55%, #80bbff);
@@ -11215,6 +11224,10 @@ p {
   margin-top: 51px;
   padding: 10px 28px;
   display: flex;
+}
+
+.add-on-details-card-btn:hover{
+  cursor: pointer;
 }
 
 .loop-shape-vertical-4 {
@@ -24754,7 +24767,7 @@ p {
     line-height: 40px;
   }
 
-  .add-on-card-btn-2 {
+  .add-on-details-card-btn {
     margin-top: 20px;
   }
 
